@@ -17,11 +17,11 @@
 
 
 
-## Clinical Evalutaion
-[Amir]
+## Clinical Evaluation
+Code for the clinical and population-scale evaluation is in [`code-clinical-analysis/`](./code-clinical-analysis). It tests whether the CT-derived substructure volumes carry information about clinical and laboratory parameters beyond demographics; the folder's README documents the expected data schema. Patient-level data are not released due to data-sharing agreements, but reasonable requests can be directed to the corresponding author.
 
 ## CO2 Emission Computation
-[Amir]
+Code for the carbon-footprint estimates is in [`code-co2-emission/`](./code-co2-emission). Emissions for pre-training, training and per-patient inference are computed with the Green Algorithms framework (Lannelongue et al., *Advanced Science*, 2021), with all hardware and grid inputs provided.
 
 
 # Citation
