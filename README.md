@@ -43,7 +43,20 @@ and Hundertmark, Moritz and Windecker, Stephan and Grani, Christoph and Shiri, I
   doi    = {10.48550/arXiv.2607.11287},
   url    = {https://arxiv.org/abs/2607.11287}
 }
-```
+
+@article{kazaj2025claims,
+  author    = {Pooya Mohammadi Kazaj and Giovanni Baj and Yazdan Salimi and Anselm W. Stark and Waldo Valenzuela
+                 and George C. M. Siontis and Habib Zaidi and Mauricio Reyes and Christoph Graeni and Isaac Shiri},
+  title     = {From Claims to Evidence: A Unified Framework and Critical Analysis of CNN vs. Transformer vs. Mamba in Medical Image Segmentation},
+  journal   = {arXiv preprint},
+  volume    = {2503.01306},
+  year      = {2025},
+  archivePrefix = {arXiv},
+  primaryClass = {eess.IV},
+  doi       = {10.48550/arXiv.2503.01306},
+  url       = {https://arxiv.org/abs/2503.01306}
+}
+
 ```
 Mohammadi Kazaj, P., Weber, L. F., Xie, W., Safavi-Naini, S. A. A., Stark, A., Baj, G., Mokhtari, A., Yoshida, T., Ryffel, C., Okuno, T., Akashi, Y., Buechel, R. R., Pilgrim, T., Valenzuela, W., Siontis, G. C. M., Xu, X., Hundertmark, M., Windecker, S., Grani, C., Shiri, I. (2026). A unified framework for comprehensive cardiac CT segmentation and phenotyping: human-in-the-loop data annotation, vision foundation model development, multicenter evaluation and clinical validation. arXiv preprint arXiv:2607.11287.
 ```
