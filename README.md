@@ -23,6 +23,9 @@ Code for the clinical and population-scale evaluation is in [`code-clinical-anal
 ## CO2 Emission Computation
 Code for the carbon-footprint estimates is in [`code-co2-emission/`](./code-co2-emission). Emissions for pre-training, training and per-patient inference are computed with the Green Algorithms framework (Lannelongue et al., *Advanced Science*, 2021), with all hardware and grid inputs provided.
 
+# License
+This project is covered under the [Attribution-NonCommercial 4.0 International](LICENSE.md) License.
+
 
 # Citation
 Please kindly cite the following paper if you use this repository.
