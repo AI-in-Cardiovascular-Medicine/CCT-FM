@@ -1,0 +1,14 @@
+[project]
+name = "co2-emission"
+version = "1.0.0"
+description = "Carbon-footprint estimation for model training and inference (Green Algorithms framework)"
+requires-python = "==3.10.*"
+authors = [{ name = "Seyed Amir Ahmad Safavi-Naini", email = "sdamirsa@gmail.com" }]
+
+dependencies = [
+    "numpy>=1.24,<2.0",
+    "matplotlib>=3.7,<4.0",
+]
+
+[tool.uv]
+package = false

@@ -1,0 +1,62 @@
+{
+  "_meta": {
+    "description": "Hardware and grid configuration for THIS study's CO2 calculations",
+    "formula": "CO2e(kg) = runtime_hours \u00d7 n_GPU \u00d7 TDP_watts \u00d7 PUE \u00d7 CI_gCO2_per_kWh \u00d7 1e-6",
+    "formula_source": "Green Algorithms framework (Lannelongue et al., Advanced Science, 2021)"
+  },
+  "gpu": {
+    "name": "NVIDIA A100 80GB PCIe",
+    "tdp_watts": 300,
+    "tdp_note": "A100 80GB PCIe TDP = 300W per NVIDIA datasheet (the SXM variant is 400W; this study used PCIe)",
+    "n_gpu": 1
+  },
+  "pretraining_gpu": {
+    "name": "NVIDIA H200 NVL",
+    "tdp_watts": 600,
+    "tdp_note": "H200 NVL TDP = 600W per NVIDIA datasheet (the SXM variant is 700W; this study used NVL)",
+    "n_gpu": 1
+  },
+  "cpu": {
+    "total_cores": 288,
+    "used_cores": 12
+  },
+  "ram_total_mb": 1031841,
+  "training": {
+    "epochs": 1000,
+    "epochs_note": "All six benchmark models trained for 1000 epochs on a single A100 80GB PCIe GPU"
+  },
+  "self_supervised_pretraining": {
+    "gpu_hours": 50,
+    "gpu_hours_note": "Self-supervised pretraining required ~50 GPU-hours on a single NVIDIA H200 NVL GPU (one-time cost, shared across the study)",
+    "n_gpu": 1
+  },
+  "facility": {
+    "pue": 1.1,
+    "pue_note": "Set to 1.1 to be comparable with other foundation-model studies (e.g., DINOv2, Oquab et al. 2024); within the typical European university HPC range of 1.1-1.5",
+    "location": "Switzerland",
+    "carbon_intensity_gCO2_per_kWh": 41,
+    "ci_note": "Switzerland 2023 grid carbon intensity = 41 gCO2/kWh (Ember, Yearly Electricity Data 2024 release, 2023 values). Production/territorial basis; consumption-based (incl. imports) is higher.",
+    "ci_source": "Ember, Global Electricity Review 2024 (2023 data)"
+  },
+  "grid_scenarios_gCO2_per_kWh": {
+    "_note": "Four cited grid carbon intensities used in Supplementary Figure S2, single consistent source.",
+    "Switzerland": 41,
+    "EU-27": 242,
+    "United States": 369,
+    "World (global average)": 480,
+    "source": "Ember, Global Electricity Review 2024 and European Electricity Review 2024 (2023 values); mirrored by Our World in Data, 'Carbon intensity of electricity'"
+  },
+  "assumptions": {
+    "energy_model": "GPU TDP-based; CPU and RAM energy not included",
+    "scope": "Scope 2 operational GPU emissions only (no CPU/RAM term, no embodied carbon)",
+    "note": "Energy estimated as runtime \u00d7 GPU_TDP \u00d7 PUE. This approximates GPU operational energy; it omits the CPU/RAM term of the full Green Algorithms model and embodied hardware emissions."
+  },
+  "reference": "Lannelongue L, Grealey J, Inouye M. Green Algorithms: Quantifying the Carbon Footprint of Computation. Advanced Science. 2021;8(12):2100707.",
+  "reference_comparison": {
+    "activity": "Driving an average European passenger car",
+    "car_factor_gCO2_per_km": 175,
+    "car_factor_source": "Green Algorithms (Lannelongue et al., Advanced Science 2021): ~175 gCO2e/km for an average European passenger car (same comparator used by Selvan et al. 2022)",
+    "distance_km": 100,
+    "co2_kg": 17.5
+  }
+}

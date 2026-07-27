@@ -1,0 +1,29 @@
+[project]
+name = "cct-volume-and-clinical-var"
+version = "1.0.0"
+description = "Pairwise SHAP-eta and incremental-value analysis of CT-derived cardiac substructure volumes vs clinical/laboratory parameters in an aortic-stenosis/TAVI cohort"
+
+requires-python = "==3.10.*"
+authors = [{ name = "Seyed Amir Ahmad Safavi-Naini", email = "sdamirsa@gmail.com" }]
+
+dependencies = [
+    "numpy>=1.24,<2.0",
+    "pandas>=2.0,<3.0",
+    "scipy>=1.10,<2.0",
+    "scikit-learn>=1.3,<2.0",
+    "statsmodels>=0.14,<1.0",
+    "catboost>=1.2,<2.0",
+    "matplotlib>=3.7,<4.0",
+    "openpyxl>=3.1,<4.0",
+]
+
+[dependency-groups]
+dev = ["ruff>=0.4", "pytest>=8.0"]
+
+[tool.uv]
+
+package = false
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
