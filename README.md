@@ -17,14 +17,20 @@
 
 
 
+## Model Training and Benchmarks
+Code for all training runs is in [`model_training_and_benchmarks/`](./model_training_and_benchmarks): self-supervised pre-training on the 60k unlabelled corpus, supervised training of the segmentation models, the architecture and model benchmarks against the five external test sets, and the downstream / label-efficiency grids — all driven through [nnUZoo](https://github.com/AI-in-Cardiovascular-Medicine/nnUZoo). The folder's README lists the trainer name per model, the two required environments, and the exact preprocessing, pre-training, training and testing commands.
+
+## Figures and Statistics
+Code for every figure and statistical test computed on the benchmark results is in [`figures-and-statistics/`](./figures-and-statistics): the radar/heatmap comparisons against the open-source tools, the label-efficiency curves with bootstrap confidence intervals, the CT-Aug ablation, the downstream-task bar and box plots, the multi-panel figure assembly, and the Wilcoxon paired tests between models. It reads only the metric JSONs written by the evaluation step, so it needs neither torch nor nnUZoo; the folder's README maps each script to the figure it produces.
+
 ## Clinical Evaluation
-Code for the clinical and population-scale evaluation is in [`code-clinical-analysis/`](./code-clinical-analysis). It tests whether the CT-derived substructure volumes carry information about clinical and laboratory parameters beyond demographics; the folder's README documents the expected data schema. Patient-level data are not released due to data-sharing agreements, but reasonable requests can be directed to the corresponding author.
+Code for the clinical and population-scale evaluation is in [`clinical-analysis/`](./clinical-analysis). It tests whether the CT-derived substructure volumes carry information about clinical and laboratory parameters beyond demographics; the folder's README documents the expected data schema. Patient-level data are not released due to data-sharing agreements, but reasonable requests can be directed to the corresponding author.
 
 ## CO2 Emission Computation
-Code for the carbon-footprint estimates is in [`code-co2-emission/`](./code-co2-emission). Emissions for pre-training, training and per-patient inference are computed with the Green Algorithms framework (Lannelongue et al., *Advanced Science*, 2021), with all hardware and grid inputs provided.
+Code for the carbon-footprint estimates is in [`co2-emission/`](./co2-emission). Emissions for pre-training, training and per-patient inference are computed with the Green Algorithms framework (Lannelongue et al., *Advanced Science*, 2021), with all hardware and grid inputs provided.
 
 # License
-This project is covered under the [Attribution-NonCommercial 4.0 International](LICENSE.md) License.
+ⓒ AI-CVM Lab. This repository is released under the [CC-BY-NC-ND 4.0](./LICENSE.md) license and may only be used for non-commercial, academic research purposes with proper attribution. Any commercial use, sale, or other monetization of this repository is prohibited and requires prior approval. By downloading any pretrained encoder, you agree to follow the model's respective license.
 
 
 # Citation
