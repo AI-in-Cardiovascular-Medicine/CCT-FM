@@ -27,7 +27,7 @@ What is reported:
 | Path | Purpose |
 |------|---------|
 | [train.py](train.py) | Single entry point for preprocessing, training and testing; wraps the nnUZoo CLI, sets the `nnUNet_*` environment variables, and chains prediction → (optional label reversal) → evaluation |
-| [pyproject.toml](pyproject.toml) | Only the extras this repo adds on top of nnUZoo — the `train.py` imports and the test-metric dependency. nnUZoo itself provides everything else |
+| [requirements.txt](requirements.txt) | Only the extras this repo adds on top of nnUZoo — the `train.py` / `inference.py` imports. nnUZoo itself provides everything else |
 
 The figures and statistical tests computed on the metric JSONs this produces live in
 [`figures-and-statistics/`](../figures-and-statistics), which needs neither torch nor
