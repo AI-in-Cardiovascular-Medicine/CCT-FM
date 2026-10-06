@@ -87,7 +87,7 @@ def main() -> None:
                                     stderr=subprocess.STDOUT, env=child_env)
         dt = time.time() - phase_t
         if result.returncode != 0:
-            log(f"[{i}/{len(PHASES)}] {name:<14s} FAILED rc={result.returncode} after {dt:.0f}s")
+            log(f"[{i}/{len(PHASES)}] {name:<14s} FAILED rc={result.returncode} after {dt:.0f}s, see {logpath}, command: {' '.join(full)}")
             log("PIPELINE FAILED")
             sys.exit(1)
         log(f"[{i}/{len(PHASES)}] {name:<14s} OK in {dt:.0f}s")
