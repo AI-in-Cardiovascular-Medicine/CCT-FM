@@ -13,8 +13,8 @@ aortic-stenosis / TAVI cohort:
 **The patient-level data are not released.** They are individual-level clinical imaging data and
 cannot be shared publicly. This repository contains the analysis code only.
 
-The pipeline expects a single spreadsheet at `data/raw_data_for_correlation (1).xlsx`
-(path set in `src/config/__init__.py`), one row per patient, with these columns:
+The pipeline expects a single spreadsheet at `data/raw_data_for_correlation.xlsx`
+(path set in `src/config.py`), one row per patient, with these columns:
 
 | Group | Columns |
 |-------|---------|
