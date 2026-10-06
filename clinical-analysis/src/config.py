@@ -9,8 +9,8 @@ import os
 # ─── Paths ───────────────────────────────────────────────────────────────
 # This file is src/config/__init__.py, so three dirname() calls climb
 # __init__.py → config/ → src/ → project root.
-BASE_DIR  = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # project root (config package lives in src/config/)
-DATA_PATH = os.path.join(BASE_DIR, "data", "raw_data_for_correlation (1).xlsx")
+BASE_DIR  = os.path.split(__file__)[0]  # project root (config package lives in src/config.py)
+DATA_PATH = os.path.join(BASE_DIR, "data", "raw_data_for_correlation.xlsx")
 # OUT_DIR is env-overridable so the SAME pipeline can be re-run on a filtered
 # cohort into a separate folder (e.g. output-male / output-female) without
 # touching the canonical full-cohort run. When CCT_OUT_DIR is unset this is the
